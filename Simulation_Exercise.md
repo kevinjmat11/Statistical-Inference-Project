@@ -22,7 +22,7 @@ set.seed(119983)
 sim.distrib <- matrix(data=rexp(n * num.of.sim, lambda), nrow=num.of.sim)
 ```
 
-\#\#\#Sample mean vs theoretical mean
+### Sample mean vs theoretical mean
 
 we compute the means and store the results in a dataframe which is what
 the dplyr and ggplot2 packages take as input and it’s also the typical
@@ -67,7 +67,7 @@ around the mean of our simulated distribution, that is **4.982365** (the
 black vertical line) which is very close to the theoretical mean
 1/lambda = **5**
 
-\#\#\#Sample Variance versus Theoretical Variance
+### Sample Variance versus Theoretical Variance
 
 ``` r
 #Compute the variance of the sample means
@@ -86,7 +86,7 @@ sd.samp <- sim_mns  %>% select(means)  %>% unlist() %>%  sd()
 
 As we can see they’re very close, 0.628253 and 0.625, respectively.
 
-\#\#\#Normality of the Distribution
+### Normality of the Distribution
 
 From the Central limit theorem we know that the distribution of averages
 of normalized variables becomes that of a standard normal distribution
